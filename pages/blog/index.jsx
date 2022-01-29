@@ -1,5 +1,5 @@
 import React from "react";
-import { Layout } from "components";
+import { Footer, Layout } from "components";
 import { SVGHello } from 'public/svg'
 import Image from "next/image";
 import moment from "moment";
@@ -98,9 +98,7 @@ const Blog = () => {
         </main>
 
       </div>
-      <footer className="p-8 flex justify-center dark:bg-slate-700 bg-red-400">
-        <p>&copy;{new Date().getFullYear()} - Dzaky Badawi</p>
-      </footer>
+      <Footer />
     </Layout>
   );
 };
