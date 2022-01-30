@@ -49,21 +49,21 @@ const Portfolio = () => {
                 <div className='grid grid-cols-6 md:flex md:flex-col gap-2'>
                   <IoLogoReact className='text-3xl' />
                   <div className='col-span-5'>
-                    <h2 className='text-xl font-bold'>Front End with React </h2>
+                    <h2 className='text-xl font-bold text-red-400 dark:text-sky-400'>Front End with React </h2>
                     <p className='text-base mt-2'>Experience to create web interfaces with React.js and React Native for mobile platform (Android)</p>
                   </div>
                 </div>
                 <div className='grid grid-cols-6 md:flex md:flex-col gap-2'>
                   <IoLogoVue className='text-3xl' />
                   <div className='col-span-5'>
-                    <h2 className='text-xl font-bold'>Front End with Vue </h2>
+                    <h2 className='text-xl font-bold text-red-400 dark:text-sky-400'>Front End with Vue </h2>
                     <p className='text-base  mt-2'>Experience creating web interfaces with Vue.js and vuex for global state management</p>
                   </div>
                 </div>
                 <div className='grid grid-cols-6 md:flex md:flex-col gap-2'>
                   <IoLogoSass className='text-3xl' />
                   <div className='col-span-5'>
-                    <h2 className='text-xl font-bold'>Web Design</h2>
+                    <h2 className='text-xl font-bold text-red-400 dark:text-sky-400'>Web Design</h2>
                     <p className='text-base mt-2'>Experience with CSS3 and SASS to make vanilla CSS, also have worked with CSS frameworks like Tailwind</p>
                   </div>
                 </div>
@@ -71,7 +71,7 @@ const Portfolio = () => {
                   <IoLogoFigma className='text-3xl' />
                   <div className='col-span-5'>
 
-                    <h2 className='text-xl font-bold'>UI/UX Tools </h2>
+                    <h2 className='text-xl font-bold text-red-400 dark:text-sky-400'>UI/UX Tools </h2>
                     <p className='text-base mt-2'>Experience using tools like Figma, for creating high-fidelity design</p>
                   </div>
                 </div>
@@ -79,14 +79,14 @@ const Portfolio = () => {
                   <IoLogoNodejs className='text-3xl' />
                   <div className='col-span-5'>
 
-                    <h2 className='text-xl font-bold'>Back End </h2>
+                    <h2 className='text-xl font-bold text-red-400 dark:text-sky-400'>Back End </h2>
                     <p className='text-base mt-2'>Experience build web services and REST API with Node.js (Express) and MongoDB (mongoose)</p>
                   </div>
                 </div>
                 <div className='grid grid-cols-6 md:flex md:flex-col gap-2'>
                   <IoLogoGithub className='text-3xl' />
                   <div className='col-span-5'>
-                    <h2 className='text-xl font-bold'>Repo Tools</h2>
+                    <h2 className='text-xl font-bold text-red-400 dark:text-sky-400'>Repo Tools</h2>
                     <p className='text-base mt-2'>Experience using git command and Github for code repository management</p>
                   </div>
                 </div>
@@ -96,8 +96,8 @@ const Portfolio = () => {
           <div className='flex flex-col gap-4'>
             <h1 className='text-xl text-white font-bold'>Work Experience</h1>
             <div className='shadow-md dark:bg-slate-800 p-8 rounded-md bg-white flex flex-col gap-4'>
-              <h2 className='text-xl font-bold'>Front End Developer <br /> (React.js Developer) </h2>
-              <div className='font-semibold text-base flex flex-col md:flex-row md:items-center gap-2 md:gap-8'>
+              <h2 className='text-xl font-bold text-red-400 dark:text-sky-400'>Front End Developer <br /> (React.js Developer) </h2>
+              <div className='font-semibold text-base flex flex-col-reverse md:flex-row md:items-center gap-2 md:gap-4'>
                 <p>2020 - 2022</p>
                 <span className='hidden md:block text-xl'>|</span>
                 <p>PT. Sarana Maju Lestari, Surabaya</p>
@@ -108,8 +108,8 @@ const Portfolio = () => {
           <div className='flex flex-col gap-4'>
             <h1 className='text-xl text-white font-bold'>Education</h1>
             <div className='shadow-md dark:bg-slate-800 p-8 rounded-md bg-white flex flex-col gap-4'>
-              <h2 className='text-xl font-bold'>Informatics <br /> (Bachelor's Degree/S1) </h2>
-              <div className='font-semibold text-base flex flex-col md:flex-row md:items-center gap-2 md:gap-8'>
+              <h2 className='text-xl font-bold text-red-400 dark:text-sky-400'>Informatics <br /> (Bachelor's Degree/S1) </h2>
+              <div className='font-semibold text-base flex flex-col-reverse md:flex-row md:items-center gap-2 md:gap-4'>
                 <p>2015 - 2019</p>
                 <span className='hidden md:block text-xl'>|</span>
                 <p>Islamic University of Indonesia, Sleman</p>
@@ -202,21 +202,21 @@ const Portfolio = () => {
         </div>
         <div className='container px-8'>
           <h1 className='text-xl mb-4 font-bold'>Feel free to contact me</h1>
-          <div className='flex flex-col gap-4'>
-            <div className='flex items-center gap-2 '>
+          <div className='flex flex-col gap-4 items-start'>
+            <a target={'_blank'} href='https://wa.me/6282136526483' className='flex items-center gap-2 hover:text-red-400 hover:dark:text-sky-400 cursor-pointer'>
               <IoLogoWhatsapp />
               <p>+62 821 3652 6483</p>
-            </div>
-            <div className='flex items-center gap-2 '>
+            </a>
+            <a target={'_blank'} href='https://www.linkedin.com/in/dzaky-badawi-46656a163/' className='flex items-center gap-2 hover:text-red-400 hover:dark:text-sky-400 cursor-pointer'>
               <IoLogoLinkedin />
               <p>linkedin.com/in/dzaky-badawi-46656a163/</p>
-            </div>
-            <div className='flex items-center gap-2 '>
+            </a>
+            <a href="mailto: dzaky.badawi@gmail.com" className='flex items-center gap-2 hover:text-red-400 hover:dark:text-sky-400 cursor-pointer'>
               <IoMail />
               <p>
                 dzaky.badawi@gmail.com
               </p>
-            </div>
+            </a>
           </div>
         </div>
       </section>
