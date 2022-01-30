@@ -27,7 +27,7 @@ const Portfolio = () => {
               As a front-end developer I'm very interested in topics about
               web application development using React.js and UI/UX design.
             </p>
-            <button className=' bg-red-400 hover:bg-red-500 dark:bg-sky-400 hover:dark:bg-sky-500 text-white py-4 px-8 rounded-lg hover:-translate-y-1 transition '>Download CV</button>
+            <button className=' bg-red-400 hover:bg-red-500 dark:bg-sky-400 hover:dark:bg-sky-500 text-white py-4 px-8 rounded-lg hover:-translate-y-1 transition '>Download Resume</button>
           </section>
           <section className='w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-red-400 dark:bg-sky-300 relative rounded-full'>
             <div className="h-44 w-44 md:w-64 md:h-64 lg:w-72 lg:h-72 bg-white rounded-full absolute top-0 right-0">
