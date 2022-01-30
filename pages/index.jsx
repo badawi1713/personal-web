@@ -16,13 +16,13 @@ const Home = () => {
               to my personal website
             </h1>
             <p className='md:w-4/6 text-lg'>
-              Hello, thank you for taking the time to visit. I am Dzaky, specialize in user interface development. On this website you can read my personal blog and the juicy bits about me, or find out why you should hire me.
+              Hello, thank you for taking the time to visit. I am Dzaky, a <em>ramenthusiast</em> guy and Frontend developer. On this website you can read my personal blog and the juicy bits about me, or find out why you should hire me.
             </p>
             <div className='flex flex-col md:flex-row gap-4'>
               <Link href='/blog'>
-                <button className=' bg-red-400 hover:bg-red-500 dark:bg-sky-400 hover:dark:bg-sky-500  py-4 px-8 rounded-lg hover:-translate-y-1 transition '>Read my Blog</button>
+                <button className=' bg-red-400 hover:bg-red-500 dark:bg-sky-400 hover:dark:bg-sky-500  py-4 px-8 rounded-lg hover:-translate-y-1 transition text-white '>Read my Blog</button>
               </Link>
-              <Link href='/resume'>
+              <Link href='/portfolio'>
                 <button className='border border-red-400 hover:border-red-500 dark:border-sky-400 hover:dark:border-sky-500 py-4 px-8 rounded-lg hover:-translate-y-1 transition '>About Me</button>
               </Link>
             </div>

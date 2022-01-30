@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Footer = () => {
-    return <footer className="p-8 flex justify-center dark:bg-slate-700 bg-red-400">
-        <p>&copy;{new Date().getFullYear()} - Dzaky Badawi</p>
+    return <footer className="p-8 flex justify-center dark:bg-slate-800">
+        <p>&copy;{new Date().getFullYear()} - <span className='text-red-400 dark:text-sky-400'>Dzaky Badawi</span></p>
     </footer>
 };
 
