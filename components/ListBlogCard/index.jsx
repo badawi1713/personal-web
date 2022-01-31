@@ -1,8 +1,8 @@
 import moment from "moment";
-import Link from 'next/link';
-import PropTypes from 'prop-types';
+import Link from "next/link";
+import PropTypes from "prop-types";
 import React from "react";
-import { IoCalendar } from 'react-icons/io5';
+import { IoCalendar } from "react-icons/io5";
 
 const ListBlogCard = ({ blog }) => {
     return <div className="bg-white dark:bg-slate-700 rounded-md shadow-md flex flex-col">
@@ -20,7 +20,7 @@ const ListBlogCard = ({ blog }) => {
             </div>
             <div className="flex items-center gap-2 mt-4">
                 <IoCalendar className="text-red-400 dark:text-sky-400" />
-                <p>{moment(new Date()).format('MMMM DD, YYYY')}</p>
+                <p>{moment(new Date()).format("MMMM DD, YYYY")}</p>
             </div>
         </div>
 

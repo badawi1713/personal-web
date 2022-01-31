@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import PropTypes from 'prop-types';
-import React from 'react';
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
 
 const FeaturedBlogCard = ({ featuredPost }) => {
     return <div className="bg-white dark:bg-slate-700 rounded-md shadow-md flex flex-col-reverse md:flex-row justify-between md:gap-8">
 
         <div className="py-8 px-4 flex flex-col gap-4">
-            <Link href='/blog/post/1'>
+            <Link href="/blog/post/1">
                 <a className="cursor-pointer hover:text-red-500 hover:dark:text-sky-500 text-2xl font-semibold text-red-400 dark:text-sky-400">long established</a>
             </Link>
             <p className="text-base leading-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....</p>

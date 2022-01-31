@@ -1,19 +1,19 @@
 import { FeaturedBlogCard, FollowCard, Footer, Layout, ListBlog, ListBlogCard, RecentBlog } from "components";
 import Image from "next/image";
-import { SVGHello } from 'public/svg';
+import { SVGHello } from "public/svg";
 import React from "react";
 
 const Blog = () => {
   return (
     <Layout title={"All Posts"}>
-      <div className='min-h-screen flex flex-col w-full dark:bg-slate-800'>
+      <div className="min-h-screen flex flex-col w-full dark:bg-slate-800">
         <header className="py-10 flex items-center justify-around px-8 bg-red-400 dark:bg-slate-700">
           <div>
             <h1 className="text-5xl font-bold leading-tight md:leading-snug relative mb-4 text-white">Taste of shoyu <br /> ramen <span className=" origin-center rotate-12 ml-4 absolute">🍜</span></h1>
             <p className="text-lg text-white">Welcome to my personal blog</p>
           </div>
           <div className="hidden md:block">
-            <Image src={SVGHello} alt='header-illustrator' width={700} />
+            <Image src={SVGHello} alt="header-illustrator" width={700} />
           </div>
         </header>
 

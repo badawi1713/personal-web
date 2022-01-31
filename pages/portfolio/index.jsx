@@ -1,7 +1,7 @@
-import { AboutMe, Contact, ExperienceCard, Footer, Layout, PortfolioCard, TechnologiesCard } from 'components';
-import React from 'react';
-import Masonry from 'react-masonry-css';
-import { experiences, portfolio } from 'utils';
+import { AboutMe, Contact, ExperienceCard, Footer, Layout, PortfolioCard, TechnologiesCard } from "components";
+import React from "react";
+import Masonry from "react-masonry-css";
+import { experiences, portfolio } from "utils";
 
 const breakpointColumnsObject = {
   default: 2,
@@ -11,12 +11,12 @@ const breakpointColumnsObject = {
 };
 
 const Portfolio = () => {
-  return <Layout title='About Me'>
+  return <Layout title="About Me">
     <main>
       <AboutMe />
 
-      <section className='flex flex-col items-center justify-center w-full dark:bg-slate-700 bg-red-400'>
-        <div className='container flex flex-col px-8 py-20 gap-8'>
+      <section className="flex flex-col items-center justify-center w-full dark:bg-slate-700 bg-red-400">
+        <div className="container flex flex-col px-8 py-20 gap-8">
           <TechnologiesCard />
           {experiences.map((item, index) => (
             <ExperienceCard experience={item} key={index} />
@@ -24,9 +24,9 @@ const Portfolio = () => {
         </div>
 
       </section>
-      <section className='flex flex-col items-center justify-center w-full dark:bg-slate-800'>
-        <div className='container px-8 pt-20 pb-8'>
-          <h1 className='text-xl mb-4 font-bold'>Featured Works</h1>
+      <section className="flex flex-col items-center justify-center w-full dark:bg-slate-800">
+        <div className="container px-8 pt-20 pb-8">
+          <h1 className="text-xl mb-4 font-bold">Featured Works</h1>
           <Masonry
             breakpointCols={breakpointColumnsObject}
             className="my-masonry-grid flex w-full gap-8 "

@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import Masonry from 'react-masonry-css';
+import PropTypes from "prop-types";
+import React from "react";
+import Masonry from "react-masonry-css";
 
 const breakpointColumnsObject = {
     default: 2,

@@ -1,7 +1,7 @@
-import { Navbar } from 'components';
-import Head from 'next/head';
-import PropTypes from 'prop-types';
-import React from 'react';
+import { Navbar } from "components";
+import Head from "next/head";
+import PropTypes from "prop-types";
+import React from "react";
 
 const Layout = ({ title, children }) => {
     return <>
