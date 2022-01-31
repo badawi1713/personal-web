@@ -29,6 +29,12 @@ const Navbar = () => {
 
     useEffect(() => {
 
+        const currentTheme = window.localStorage.getItem('theme')
+        if (!currentTheme) {
+            setChecked(true)
+            setTheme('light')
+        }
+
         if (theme === "dark") {
             setChecked(false)
         } else {
