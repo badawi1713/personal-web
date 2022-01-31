@@ -65,9 +65,9 @@ const Navbar = () => {
 
                 </div>
                 <nav className="md:hidden flex-col flex gap-8">
-                    <ActiveLink activeClassName={"text-red-400 dark:text-sky-400"} href="/"><a className="hover:text-red-400 hover:dark:text-sky-400 font-semibold text-lg" >Home</a></ActiveLink>
-                    <ActiveLink activeClassName={"text-red-400 dark:text-sky-400"} href="/blog"><a className="hover:text-red-400 hover:dark:text-sky-400 font-semibold text-lg" >Blog</a></ActiveLink>
-                    <ActiveLink activeClassName={"text-red-400 dark:text-sky-400"} href="/portfolio"><a className="hover:text-red-400 hover:dark:text-sky-400 font-semibold text-lg">Portfolio</a></ActiveLink>
+                    <ActiveLink activeClassName={"text-red-400 dark:text-sky-400"} href="/"><a onClick={() => setOpenSidebar(false)} className="hover:text-red-400 hover:dark:text-sky-400 font-semibold text-lg" >Home</a></ActiveLink>
+                    <ActiveLink activeClassName={"text-red-400 dark:text-sky-400"} href="/blog"><a onClick={() => setOpenSidebar(false)} className="hover:text-red-400 hover:dark:text-sky-400 font-semibold text-lg" >Blog</a></ActiveLink>
+                    <ActiveLink activeClassName={"text-red-400 dark:text-sky-400"} href="/portfolio"><a onClick={() => setOpenSidebar(false)} className="hover:text-red-400 hover:dark:text-sky-400 font-semibold text-lg">Portfolio</a></ActiveLink>
                 </nav>
             </div>
         </div> :
