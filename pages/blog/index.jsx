@@ -32,7 +32,7 @@ const Blog = () => {
           </section>
 
           <div className="md:col-span-2 w-full relative">
-            <div className="md:sticky md:top-8 w-full flex flex-col gap-4 ">
+            <div className="md:sticky md:top-4 w-full flex flex-col gap-4 ">
               <RecentBlog />
               <FollowCard />
             </div>
