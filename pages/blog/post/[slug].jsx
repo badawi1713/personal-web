@@ -1,15 +1,17 @@
-import { Author, Footer, Layout, RelatedPostCard } from "components";
+import { Author, BlogContent, Footer, Layout, RelatedPostCard } from "components";
 import moment from "moment";
+import Image from 'next/image';
 import React from "react";
 import { IoCalendar } from "react-icons/io5";
-import Image from 'next/image'
+import { getPostDetails, getPosts } from "services";
 
-const Post = () => {
-  return <Layout title="Blog Title">
+const Post = ({ post }) => {
+
+  return <Layout title={post?.title || "Blog Title"}>
     <main className="p-8 dark:bg-slate-800 flex flex-col gap-8 min-h-screen">
       <div className="flex flex-col gap-4">
         <div className="w-full h-52 md:h-96 relative">
-          <Image src="/images/img-default.jpg"
+          <Image src={post?.featuredImage?.url || "/images/img-default.jpg"}
             alt="illustration"
             layout="fill"
             quality={100}
@@ -19,35 +21,57 @@ const Post = () => {
           />
         </div>
         <header>
-          <h1 className="text-4xl font-bold">Blog Title</h1>
+          <h1 className="text-4xl font-bold">{post?.title}</h1>
           <div className="flex items-center gap-2 mt-4">
             <IoCalendar className="text-red-400 dark:text-sky-400" />
-            <p>{moment(new Date()).format("MMMM DD, YYYY")}</p>
+            <p>{moment(post?.createdAt || new Date()).format("MMMM DD, YYYY")}</p>
           </div>
         </header>
         <article className="p-4 md:p-8 dark:bg-slate-700 rounded-md shadow-md">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas hendrerit a felis id tempor. Fusce augue sem, tempus in velit non, sagittis pretium justo. Donec lacinia eu ante iaculis egestas. Donec magna lorem, cursus in aliquet in, pellentesque a tortor. Vestibulum eros nunc, tristique tristique congue et, posuere vel felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. In aliquet dolor in tempus pellentesque. Mauris et viverra nulla, ut suscipit metus. Morbi porttitor egestas nulla, vitae ultricies ante luctus vel. Integer iaculis convallis est, vehicula tristique nibh placerat ac. Sed et sollicitudin dui.
-            Aliquam sit amet maximus lorem. Aliquam placerat ligula et nulla vehicula, in ullamcorper diam convallis. Proin eget posuere lacus. Donec posuere vestibulum eros vel pretium. Fusce ut mi vel risus aliquam egestas id eget ligula. Donec malesuada sem ac sem molestie, nec porta sapien consectetur. Etiam vitae massa non est commodo venenatis. Sed vel ex sit amet libero iaculis fringilla. Donec sed nulla accumsan, rhoncus urna ut, accumsan nulla. Aliquam ullamcorper bibendum bibendum.
-            In vitae mi dignissim, molestie lectus quis, pellentesque purus. Nam metus nibh, mattis ut dui ut, interdum facilisis tortor. Nunc eu odio a nisi ullamcorper congue quis vel dui. Praesent blandit porttitor imperdiet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc rutrum vel tortor eu iaculis. Quisque id massa gravida, euismod dui ut, iaculis ex. Nulla id libero feugiat dolor condimentum cursus. Nulla hendrerit augue nisi, sed maximus dolor scelerisque eu. Cras vitae fermentum felis, nec interdum ligula.
-            Cras pharetra ipsum ut euismod tincidunt. Mauris id arcu id justo efficitur tempor. Fusce eleifend nisi ac nisi ornare, ac interdum sem euismod. Quisque eu nibh condimentum dolor congue vehicula. Praesent placerat purus in eros egestas, ac placerat nulla placerat. Integer molestie consectetur velit eu molestie. Aenean a urna nunc. Curabitur eu libero cursus, pellentesque neque at, tincidunt ligula.
-            Aenean tincidunt dolor id quam lobortis posuere. Morbi pretium sit amet ex rhoncus pharetra. Vestibulum metus mauris, varius dictum mi sed, sollicitudin fringilla enim. Fusce eget leo odio. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur imperdiet sem at sapien mattis venenatis. Sed pellentesque nec massa nec molestie. Vivamus ac libero id arcu bibendum ultrices. Nunc nec ex ut nunc dapibus vestibulum vel vel velit. Sed at gravida lacus, non rhoncus erat.
-          </p>
+          {post?.content?.raw?.children?.map((typeObj, index) => {
+            const children = typeObj.children.map((item, itemIndex) => {
+              // console.log(item)
+              return BlogContent(itemIndex, item.text, item)
+
+            }
+            );
+            // console.log(children)
+            return BlogContent(index, children, typeObj, typeObj.type);
+          }) || <p>No content here</p>}
         </article>
         <Author />
       </div>
-      <hr />
-      <div className="flex flex-col gap-4">
-        <header>
-          <h1 className="text-xl font-bold">Related Post</h1>
-        </header>
-        <section className="grid md:grid-cols-3 grid-cols-1 gap-8">
-          <RelatedPostCard />
-        </section>
-      </div>
+
+      {post?.categories?.length > 0 && (
+        <>
+          <hr />
+          <div className="flex flex-col gap-4">
+            <header>
+              <h1 className="text-xl font-bold">Related Post</h1>
+            </header>
+            <RelatedPostCard slug={post?.slug} categories={post?.categories?.map((category) => category.slug)} />
+          </div>
+        </>
+      )}
     </main>
     <Footer />
   </Layout>;
 };
 
 export default Post;
+
+export async function getStaticProps({ params }) {
+  const data = (await getPostDetails(params.slug)) || [];
+
+  return {
+    props: { post: data },
+  };
+}
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return {
+    paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
+    fallback: true,
+  };
+}

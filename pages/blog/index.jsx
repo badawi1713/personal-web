@@ -2,8 +2,12 @@ import { FeaturedBlogCard, FollowCard, Footer, Layout, ListBlog, ListBlogCard, R
 import Image from "next/image";
 import { SVGHello } from "public/svg";
 import React from "react";
+import { getPosts, getRecentPosts } from "services";
 
-const Blog = () => {
+const Blog = ({ posts, recentPosts }) => {
+  const featuredPost = posts.filter(item => item?.node?.featuredPost === true)
+  const allPosts = posts.filter(item => item?.node?.featuredPost === false)
+
   return (
     <Layout title={"All Posts"}>
       <div className="min-h-screen flex flex-col w-full dark:bg-slate-800">
@@ -20,20 +24,21 @@ const Blog = () => {
         <main className="grid md:grid-cols-6 grid-cols-1 lg:grid-cols-12 gap-10 px-8 my-8">
 
           <section className="flex flex-col md:col-span-4 lg:col-span-9 gap-8">
-            <FeaturedBlogCard />
+            <FeaturedBlogCard post={featuredPost[0]?.node} />
             <hr />
             <ListBlog>
-              <ListBlogCard />
-              <ListBlogCard />
-              <ListBlogCard />
-              <ListBlogCard />
+              {
+                allPosts.map((item, index) => (
+                  <ListBlogCard key={index} post={item.node} />
+                ))
+              }
             </ListBlog>
 
           </section>
 
           <div className="md:col-span-2 lg:col-span-3 w-full relative">
             <div className="md:sticky md:top-4 w-full flex flex-col gap-4 ">
-              <RecentBlog />
+              <RecentBlog posts={recentPosts}  />
               <FollowCard />
             </div>
           </div>
@@ -45,3 +50,12 @@ const Blog = () => {
 };
 
 export default Blog;
+
+export async function getStaticProps() {
+  const posts = (await getPosts()) || [];
+  const recentPosts = (await getRecentPosts()) || [];
+
+  return {
+    props: { posts, recentPosts },
+  };
+}

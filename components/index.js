@@ -1,6 +1,7 @@
 import AboutMe from "./AboutMe";
 import ActiveLink from "./ActiveLink";
 import Author from "./Author";
+import BlogContent from "./BlogContent";
 import Contact from "./Contact";
 import ExperienceCard from "./ExperienceCard";
 import FeaturedBlogCard from "./FeaturedBlogCard";
@@ -16,6 +17,7 @@ import RelatedPostCard from "./RelatedPostCard";
 import TechnologiesCard from "./TechnologiesCard";
 
 export {
+  BlogContent,
   FollowCard,
   AboutMe,
   Contact,
@@ -33,3 +35,4 @@ export {
   FeaturedBlogCard,
   RelatedPostCard,
 };
+
