@@ -3,13 +3,18 @@ import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 import { IoCalendar } from "react-icons/io5";
+import Image from 'next/image'
 
 const RelatedPostCard = ({ post }) => {
     return <div className="bg-white dark:bg-slate-700 rounded-md shadow-md flex flex-col">
-        <img src="https://media.istockphoto.com/photos/every-time-you-open-a-book-you-learn-something-picture-id1182489122?b=1&k=20&m=1182489122&s=170667a&w=0&h=OUPs_giwFPXLNDzj-9ZZEKswO0ydMvtPKNFph4AX6JE="
-            alt="illustration"
-            className="bg-cover aspect-video rounded-t-md w-full"
-        />
+        <div className="w-full h-52 relative">
+            <Image src="/images/img-default.jpg"
+                alt="illustration"
+                layout="fill"
+                objectFit="cover"
+                className="aspect-video rounded-t-md w-full"
+            />
+        </div>
         <div className="py-8 px-4 flex flex-col justify-between flex-1 gap-4">
             <div className="flex flex-col gap-4">
                 <Link href="/blog/post/1">

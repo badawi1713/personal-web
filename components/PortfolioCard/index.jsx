@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Image from 'next/image'
 
 const PortfolioCard = ({ portfolio }) => {
     const { title,
@@ -15,7 +16,15 @@ const PortfolioCard = ({ portfolio }) => {
     }
 
     return <div className="rounded-md shadow-md bg-white dark:bg-slate-700 pb-8 flex flex-col gap-4">
-        <img className="bg-cover aspect-video rounded-t-md w-full" src={imageUrl || "https://media.istockphoto.com/photos/every-time-you-open-a-book-you-learn-something-picture-id1182489122?b=1&k=20&m=1182489122&s=170667a&w=0&h=OUPs_giwFPXLNDzj-9ZZEKswO0ydMvtPKNFph4AX6JE="} />
+        <div className="w-full relative h-80">
+            <Image
+                priority
+                alt={title || "portfolio-img"} src={imageUrl || '/images/img-default.jpg'}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-t-md"
+            />
+        </div>
         <div className="px-8 flex flex-col gap-4">
             <h1 className="text-xl font-bold text-center">{title || "Project's Title"}</h1>
             <div className="py-1 px-10 flex items-center justify-center bg-red-400 dark:bg-sky-400 rounded-full mx-auto">

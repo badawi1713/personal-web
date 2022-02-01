@@ -2,11 +2,22 @@ import { Author, Footer, Layout, RelatedPostCard } from "components";
 import moment from "moment";
 import React from "react";
 import { IoCalendar } from "react-icons/io5";
+import Image from 'next/image'
 
 const Post = () => {
   return <Layout title="Blog Title">
     <main className="p-8 dark:bg-slate-800 flex flex-col gap-8 min-h-screen">
       <div className="flex flex-col gap-4">
+        <div className="w-full h-80 relative">
+          <Image src="/images/img-default.jpg"
+            alt="illustration"
+            layout="fill"
+            quality={100}
+            objectFit="cover"
+            className="aspect-video h-full bg-cover rounded-md w-full"
+            loading="lazy"
+          />
+        </div>
         <header>
           <h1 className="text-4xl font-bold">Blog Title</h1>
           <div className="flex items-center gap-2 mt-4">
