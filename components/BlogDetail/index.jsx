@@ -9,7 +9,7 @@ const BlogDetail = ({ post }) => {
     return <>
         <main className="p-8 dark:bg-slate-800 flex flex-col gap-8 min-h-screen">
             <div className="flex flex-col gap-4">
-                <div className="w-full h-52 md:h-96 relative">
+                <div className="w-full h-52 md:h-96 relative border dark:border-slate-600 rounded-md">
                     <Image src={post?.featuredImage?.url || "/images/img-default.jpg"}
                         alt="illustration"
                         layout="fill"
@@ -46,7 +46,7 @@ const BlogDetail = ({ post }) => {
                     <hr />
                     <div className="flex flex-col gap-4">
                         <header>
-                            <h1 className="text-xl font-bold">Related Post</h1>
+                            <h1 className="text-xl font-bold">Related Posts</h1>
                         </header>
                         <RelatedPostCard slug={post?.slug} categories={post?.categories?.map((category) => category.slug)} />
                     </div>
