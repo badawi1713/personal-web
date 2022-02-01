@@ -12,7 +12,7 @@ const FeaturedBlogCard = ({ featuredPost }) => {
             <p className="text-base leading-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....</p>
         </div>
         <div className="
-        w-full md:w-80 h-full relative
+        w-full md:w-96 h-52 md:h-full relative
         ">
             <Image
                 alt="illustration"
