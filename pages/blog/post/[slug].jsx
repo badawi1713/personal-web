@@ -4,8 +4,15 @@ import Image from 'next/image';
 import React from "react";
 import { IoCalendar } from "react-icons/io5";
 import { getPostDetails, getPosts } from "services";
+import {useRouter} from 'next/router'
 
 const Post = ({ post }) => {
+
+  const router = useRouter()
+
+  if (!post) {
+    router.push('/404')
+  }
 
   return <Layout title={post?.title || "Blog Title"}>
     <main className="p-8 dark:bg-slate-800 flex flex-col gap-8 min-h-screen">

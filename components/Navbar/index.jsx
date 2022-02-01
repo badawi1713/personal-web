@@ -41,7 +41,7 @@ const Navbar = () => {
             setChecked(true)
         }
 
-    }, [theme])
+    }, [theme, setTheme])
     if (!mounted) return null
 
     return (

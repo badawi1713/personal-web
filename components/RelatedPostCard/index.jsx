@@ -22,7 +22,7 @@ const RelatedPostCard = ({ slug, categories }) => {
         }
 
         getRelatedPosts()
-    }, [slug]);
+    }, [slug, categories]);
 
     return <section className="grid md:grid-cols-3 grid-cols-1 gap-8">
         {
