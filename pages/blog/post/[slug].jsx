@@ -8,7 +8,7 @@ const Post = () => {
   return <Layout title="Blog Title">
     <main className="p-8 dark:bg-slate-800 flex flex-col gap-8 min-h-screen">
       <div className="flex flex-col gap-4">
-        <div className="w-full h-80 relative">
+        <div className="w-full h-96 relative">
           <Image src="/images/img-default.jpg"
             alt="illustration"
             layout="fill"
