@@ -2,6 +2,7 @@ import AboutMe from "./AboutMe";
 import ActiveLink from "./ActiveLink";
 import Author from "./Author";
 import BlogContent from "./BlogContent";
+import BlogDetail from "./BlogDetail";
 import Contact from "./Contact";
 import ExperienceCard from "./ExperienceCard";
 import FeaturedBlogCard from "./FeaturedBlogCard";
@@ -25,6 +26,7 @@ export {
   Navbar,
   Footer,
   TechnologiesCard,
+  BlogDetail,
   ExperienceCard,
   PortfolioCard,
   Layout,
@@ -35,4 +37,3 @@ export {
   FeaturedBlogCard,
   RelatedPostCard,
 };
-
