@@ -9,19 +9,19 @@ const RecentBlog = ({ post }) => {
             <div className="flex items-center gap-4">
                 <span className="text-white p-2 w-10 h-10 flex flex-col items-center rounded-full shrink-0 bg-red-400 dark:bg-sky-400">01</span>
                 <Link href="/blog/post/1">
-                    <a className="cursor-pointer hover:text-red-500 hover:dark:text-sky-500 text-base">long established</a>
+                    <a className="cursor-pointer w-full hover:text-red-500 hover:dark:text-sky-500 text-base">This programmer is too lazy...</a>
                 </Link>
             </div>
             <div className="flex items-center gap-4">
-                <span className="text-white p-2 w-10 h-10 flex flex-col items-center rounded-full shrink-0 bg-red-400 dark:bg-sky-400">01</span>
+                <span className="text-white p-2 w-10 h-10 flex flex-col items-center rounded-full shrink-0 bg-red-400 dark:bg-sky-400">02</span>
                 <Link href="/blog/post/1">
-                    <a className="cursor-pointer hover:text-red-500 hover:dark:text-sky-500 text-base">long established</a>
+                    <a className="cursor-pointer w-full hover:text-red-500 hover:dark:text-sky-500 text-base">Everyone should know how to do clean code, okay? </a>
                 </Link>
             </div>
             <div className="flex items-center gap-4">
-                <span className="text-white p-2 w-10 h-10 flex flex-col items-center rounded-full shrink-0 bg-red-400 dark:bg-sky-400">01</span>
+                <span className="text-white p-2 w-10 h-10 flex flex-col items-center rounded-full shrink-0 bg-red-400 dark:bg-sky-400">03</span>
                 <Link href="/blog/post/1">
-                    <a className="cursor-pointer hover:text-red-500 hover:dark:text-sky-500 text-base">long established</a>
+                    <a className="cursor-pointer w-full hover:text-red-500 hover:dark:text-sky-500 text-base">Stay beside you</a>
                 </Link>
             </div>
         </div>

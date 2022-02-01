@@ -17,9 +17,9 @@ const Blog = () => {
           </div>
         </header>
 
-        <main className="grid md:grid-cols-6 grid-cols-1 gap-10 px-8 my-8">
+        <main className="grid md:grid-cols-6 grid-cols-1 lg:grid-cols-12 gap-10 px-8 my-8">
 
-          <section className="flex flex-col md:col-span-4 gap-8">
+          <section className="flex flex-col md:col-span-4 lg:col-span-9 gap-8">
             <FeaturedBlogCard />
             <hr />
             <ListBlog>
@@ -31,7 +31,7 @@ const Blog = () => {
 
           </section>
 
-          <div className="md:col-span-2 w-full relative">
+          <div className="md:col-span-2 lg:col-span-3 w-full relative">
             <div className="md:sticky md:top-4 w-full flex flex-col gap-4 ">
               <RecentBlog />
               <FollowCard />
