@@ -26,15 +26,13 @@ const BlogDetail = ({ post }) => {
                         <p>{moment(post?.createdAt || new Date()).format("MMMM DD, YYYY")}</p>
                     </div>
                 </header>
-                <article className="p-4 md:p-8 dark:bg-slate-700 rounded-md shadow-md">
+                <article className="p-8 dark:bg-slate-700 rounded-md shadow-md">
                     {post?.content?.raw?.children?.map((typeObj, index) => {
                         const children = typeObj.children.map((item, itemIndex) => {
-                            // console.log(item)
                             return BlogContent(itemIndex, item.text, item)
 
                         }
                         );
-                        // console.log(children)
                         return BlogContent(index, children, typeObj, typeObj.type);
                     }) || <p>No content here</p>}
                 </article>

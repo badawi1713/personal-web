@@ -37,17 +37,3 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
-
-// export async function getServerSideProps ({params}) {
-//   // this will be called server-side only
-//   const data = (await getPostDetails(params.slug)) || [];
-
-//  console.log(data)
-//   return {
-//     props: {
-//       pid,
-//       // you may also add here the webservice content
-//       // to generate your page and avoid a client-side webservice call
-//     }
-//   };
-// };
