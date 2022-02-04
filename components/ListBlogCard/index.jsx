@@ -6,7 +6,7 @@ import React from "react";
 import { IoCalendar } from "react-icons/io5";
 
 const ListBlogCard = ({ post }) => {
-    return <div className="bg-white dark:bg-slate-700 rounded-md shadow-md flex flex-col">
+    return <div className="bg-white dark:bg-slate-700 rounded-md shadow-md flex flex-col border dark:border-slate-600">
         <div className="relative h-52 w-full">
             <Image
                 src={post?.featuredImage?.url || "/images/img-default.jpg"}

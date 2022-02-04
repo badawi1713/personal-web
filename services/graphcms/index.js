@@ -99,7 +99,8 @@ export const getSimilarPosts = async (categories, slug) => {
           url
         }
         createdAt
-        slug
+        slug,
+        excerpt
       }
     }
   `;

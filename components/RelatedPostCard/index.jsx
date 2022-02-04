@@ -27,7 +27,7 @@ const RelatedPostCard = ({ slug, categories }) => {
     return <section className="grid md:grid-cols-3 grid-cols-1 gap-8">
         {
             relatedPosts?.map((item, index) => (
-                <div key={index} className="bg-white dark:bg-slate-700 rounded-md shadow-md flex flex-col">
+                <div key={index} className="bg-white dark:bg-slate-700 rounded-md shadow-md flex flex-col border dark:border-slate-600">
                     <div className="w-full h-52 relative">
                         <Image
                             src={item?.featuredImage?.url || "/images/img-default.jpg"}

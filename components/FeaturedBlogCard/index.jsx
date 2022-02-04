@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 
 const FeaturedBlogCard = ({ post }) => {
-    return <div className="bg-white dark:bg-slate-700 rounded-md shadow-md flex flex-col-reverse md:flex-row justify-between md:gap-8">
+    return <div className="bg-white dark:bg-slate-700 border dark:border-slate-600 rounded-md shadow-md flex flex-col-reverse md:flex-row justify-between md:gap-8">
 
         <div className="py-8 px-4 flex flex-col gap-4">
             <Link href={`/blog/post/${post?.slug}`}>
