@@ -18,7 +18,9 @@ const BlogContent = (index, text, obj, type) => {
         }
 
         if (obj.code) {
-            modifiedText = <code className=' dark:bg-slate-900 p-2 rounded-md bg-red-300 ' key={index}>{text}</code>
+            modifiedText = <pre className=' overflow-x-auto py-2' key={index}><code className='rounded-md dark:bg-slate-900 bg-red-300 px-2 py-2'>
+            {text}
+            </code></pre>
         }
     }
 
