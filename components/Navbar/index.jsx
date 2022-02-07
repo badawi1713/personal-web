@@ -65,7 +65,7 @@ const Navbar = () => {
                             setChecked(!checked)
                         }}
                     />
-                    <button onClick={() => setOpenSidebar(false)} className="h-8 w-8 rounded-md text-xl shadow-md flex justify-center items-center border border-red-400 dark:border-sky-300">
+                    <button aria-label="nav-menu-close" onClick={() => setOpenSidebar(false)} className="h-8 w-8 rounded-md text-xl shadow-md flex justify-center items-center border border-red-400 dark:border-sky-300">
                         <IoClose />
                     </button>
 
@@ -96,7 +96,7 @@ const Navbar = () => {
                         }}
                     />
                     <div className="block md:hidden">
-                        <button onClick={() => setOpenSidebar(true)} className="h-8 w-8 rounded-md text-xl shadow-md flex justify-center items-center border border-red-400 dark:border-sky-300">
+                        <button aria-label="nav-menu" onClick={() => setOpenSidebar(true)} className="h-8 w-8 rounded-md text-xl shadow-md flex justify-center items-center border border-red-400 dark:border-sky-300">
                             <IoMenu />
                         </button>
                     </div>
