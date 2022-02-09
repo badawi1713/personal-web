@@ -1,5 +1,5 @@
+import Image from 'next/image';
 import React from 'react';
-import Image from 'next/image'
 
 const BlogContent = (index, text, obj, type) => {
     let modifiedText = text;
@@ -18,8 +18,8 @@ const BlogContent = (index, text, obj, type) => {
         }
 
         if (obj.code) {
-            modifiedText = <pre className=' overflow-x-auto py-2' key={index}><code className='rounded-md dark:bg-slate-900 bg-red-300 px-2 py-2'>
-            {text}
+            modifiedText = <pre className=' overflow-x-auto py-2' ><code className='rounded-md dark:bg-slate-900 bg-red-300 px-2 py-2'>
+                {text}
             </code></pre>
         }
     }
@@ -33,13 +33,16 @@ const BlogContent = (index, text, obj, type) => {
                     ))}
                 </h3>
             );
+
         case "paragraph":
             return (
-                <p key={index} className="mb-8">
-                    {modifiedText.map((item, i) => (
-                        <React.Fragment key={i}>{item}</React.Fragment>
-                    ))}
-                </p>
+                <React.Fragment key={index}>
+                    {modifiedText.map((item, i) => item.type === "pre" ?
+                        <div className='mb-4' key={i}>{item}</div>
+                        :
+                        <p className='mb-4' key={i}>{item}</p>
+                    )}
+                </React.Fragment>
             );
         case "heading-four":
             return (
