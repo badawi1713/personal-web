@@ -61,7 +61,7 @@ const Navbar = () => {
                             <IoMoon className="text-xl h-full flex items-center justify-center ml-1 text-white" />
                         }
                         onChange={() => {
-                            setTheme(theme === "dark" ? "light" : "dark")
+                            setTheme(theme === "dark" ? "dark" : "light")
                             setChecked(!checked)
                         }}
                     />
