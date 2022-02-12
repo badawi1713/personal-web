@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
   };
 
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider enableSystem={false} attribute="class">
       <Component {...pageProps} />
       {showScroll && (
           <div
