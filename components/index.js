@@ -11,13 +11,14 @@ import Footer from "./Footer";
 import Layout from "./Layout";
 import ListBlog from "./ListBlog";
 import ListBlogCard from "./ListBlogCard";
+import Loader from "./Loader";
 import Navbar from "./Navbar";
 import PortfolioCard from "./PortfolioCard";
 import RecentBlog from "./RecentBlog";
 import RelatedPostCard from "./RelatedPostCard";
 import TechnologiesCard from "./TechnologiesCard";
-
 export {
+  Loader,
   BlogContent,
   FollowCard,
   AboutMe,
@@ -37,3 +38,4 @@ export {
   FeaturedBlogCard,
   RelatedPostCard,
 };
+
