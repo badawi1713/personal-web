@@ -1,5 +1,16 @@
 module.exports = {
   reactStrictMode: true,
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      '/': { page: '/' },
+      '/blog': { page: '/blog' },
+      '/blog/post/:slug': { page: '/blog/post/[slug]' },
+      '/portfolio': { page: '/portfolio'},
+    }
+  },
   images: {
     domains: ["media.graphcms.com"],
   },
