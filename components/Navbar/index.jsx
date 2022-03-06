@@ -77,8 +77,8 @@ const Navbar = () => {
                 </nav>
             </div>
         </div> :
-            <nav className={`w-full ${asPath !== '/' ? ' dark:bg-slate-800 ' : 'absolute top-0'}`}>
-                <div className=' p-8 gap-8 flex justify-between items-center'>
+            <nav className={`w-full  ${asPath !== '/' ? ' dark:bg-slate-800 ' : 'absolute top-0'}`}>
+                <div className='max-w-7xl mx-auto p-8 gap-8 flex justify-between items-center '>
                     <Switch
                         aria-label='toggle-theme'
                         offColor='#7dd3fc'
