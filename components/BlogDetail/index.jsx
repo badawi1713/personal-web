@@ -7,7 +7,7 @@ import { IoCalendar } from "react-icons/io5";
 const BlogDetail = ({ post }) => {
 
     return <>
-        <main className="p-8 dark:bg-slate-800 flex flex-col gap-8 min-h-screen">
+        <main className="p-8 dark:bg-slate-800 flex flex-col gap-8 min-h-screen max-w-7xl w-full mx-auto">
             <div className="flex flex-col gap-4">
                 <div className="w-full h-52 md:h-96 relative border dark:border-slate-600 rounded-md">
                     <Image src={post?.featuredImage?.url || "/images/img-default.jpg"}

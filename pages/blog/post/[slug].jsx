@@ -6,7 +6,10 @@ const Post = ({ post }) => {
 
 
   return <Layout title={post?.title || "Blog Title"}>
+    <div className="w-full dark:bg-slate-800">
+      
     <BlogDetail post={post} />
+      </div>
   </Layout>
 };
 

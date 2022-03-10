@@ -54,13 +54,17 @@ const BlogContent = (index, text, obj, type) => {
             );
         case "image":
             return (
-                <Image
-                    key={index}
-                    alt={obj.title}
-                    height={obj.height}
-                    width={obj.width}
-                    src={obj.src}
-                />
+                <span key={index}
+                    className='flex items-center justify-center'
+                >
+                    <Image
+                        alt={obj.title}
+                        height={obj.height}
+                        width={obj.width}
+                        src={obj.src}
+                        priority
+                    />
+                </span>
             );
         case "bulleted-list":
             return (
