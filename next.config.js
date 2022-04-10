@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ["media.graphcms.com"],
+    domains: ["media.graphcms.com", "media.graphassets.com"],
   },
   i18n: {
     // These are all the locales you want to support in
