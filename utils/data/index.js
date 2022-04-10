@@ -17,11 +17,19 @@ export const experiences = [
     city: "Sleman",
     years: "2015 - 2019",
     description:
-      "I'm majoring in informatics degree at Islamic University of Indonesia for 4 years. My last project is about to build a verification system for digital forensic documents based on Blockchain technology using Node.js. While I’m in university I also applied for teaching as a web programming practicum assistant.",
+      "I'm majoring in informatics degree at Islamic University of Indonesia for 4 years with GPA 3.81. My last project is about to build a verification system for digital forensic documents based on Blockchain technology using Node.js and Solidity to create smart contract. While I’m in university I also applied for teaching as a web programming practicum assistant.",
   },
 ];
 
 export const portfolio = [
+  {
+    title: "VINTEL - PDAM Dashboard",
+    year: "2022",
+    description: "My part-time work, that started on March 2022 and still ongoing. I am creating user interface for PDAM dashboard with React.js, handling user authentication using JWT on the client side, and integrate REST API with backend team",
+    sourceCodeUrl: "",
+    demoUrl: "",
+    imageUrl: "/images/img-vintel.jpg",
+  },
   {
     title: "Koperasi",
     year: "2021",
@@ -33,7 +41,7 @@ export const portfolio = [
   {
     title: "Boiler Auto Tuning",
     year: "2021",
-    description: "One of projects from my work at PT. Sarana Maju Lestari. Boiler Auto Tuning dashboard is a web application thats used to monitor sootblow and combustion process in 7 power plants, also to show sootblow efficiency value in form of chart",
+    description: "One of projects from my work at PT. Sarana Maju Lestari. Boiler Auto Tuning dashboard is a web application thats used to monitor sootblow and combustion process in 8 power plants, also to show sootblow efficiency value in form of chart",
     sourceCodeUrl: "",
     demoUrl: "",
     imageUrl: "/images/img-bat.jpg",
@@ -41,7 +49,7 @@ export const portfolio = [
   {
     title: "SOKKET Tools",
     year: "2020",
-    description: "The main project from my work at PT. Sarana Maju Lestari. SOKKET (Sistem Pengoptimuman Ketersediaan, Keandalan, dan Efisiensi Terintegrasi Unit Pembangkitan) is a web application for our client PT. PJB (Pembangkit Jawa Bali) that used to help monitoring process from plant unit, shows reliability and efficiency value, also to manage reports. For this project I contribute in some modules like to create main dashboard at home page, profile setting, boiler efficiency, cost benefit analysis reliability module, and case management module.",
+    description: "The main project from my work at PT. Sarana Maju Lestari. SOKKET (Sistem Pengoptimuman Ketersediaan, Keandalan, dan Efisiensi Terintegrasi Unit Pembangkitan) is a web application for our client PT. PJB (Pembangkit Jawa Bali) that used to help monitoring process from plant unit, shows reliability and efficiency value, also to manage report of cases. For this project I contribute in some modules like to create main dashboard on the home page, profile setting, boiler efficiency, cost benefit analysis reliability module, and case management module",
     sourceCodeUrl: "",
     demoUrl: "",
     imageUrl: "/images/img-sokket.jpg",
