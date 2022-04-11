@@ -5,7 +5,7 @@ export const experiences = [
     subExperienceTitle: "Front End Developer",
     company: " PT. Sarana Maju Lestari",
     city: "Surabaya",
-    years: "2020 - 2022",
+    years: "2020 - Present",
     description:
       "As front-end developer at PT. Sarana Maju Lestari, I managed to contribute for their ongoing projects like built many user interfaces for SOKKET system and Boiler Auto Tuning dashboard using React.js and tools like Redux thunk, FusionChart, Figma, FuseTheme template, and Tailwind.css.",
   },
