@@ -56,9 +56,6 @@ export default Blog;
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
   const recentPosts = (await getRecentPosts()) || [];
-  await new Promise(resolve => {
-    setTimeout(resolve, 1000)
-  })
 
   return {
     props: { posts, recentPosts },
