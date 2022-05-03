@@ -17,6 +17,8 @@ function MyApp({ Component, pageProps }) {
       setLoading(false);
     };
 
+    console.log(loading)
+
     router.events.on("routeChangeStart", handleStart);
     router.events.on("routeChangeComplete", handleStop);
     router.events.on("routeChangeError", handleStop);
@@ -26,7 +28,7 @@ function MyApp({ Component, pageProps }) {
       router.events.off("routeChangeComplete", handleStop);
       router.events.off("routeChangeError", handleStop);
     };
-  }, [router]);
+  }, [router, loading]);
 
   useEffect(() => {
     const checkScrollTop = () => {
