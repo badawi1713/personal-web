@@ -6,7 +6,7 @@ import React from "react";
 const Home = () => {
 
   return (
-    <Layout title="Home">
+    <Layout title="Dzaky Badawi | Frontend Engineer">
         <main className="min-h-screen mx-auto flex flex-col items-center justify-center w-full dark:bg-slate-800">
           <div className="container max-w-7xl flex-col-reverse md:flex-row flex items-center px-8 py-20 gap-8">
             <section className="flex flex-1 flex-col gap-8 md:items-start">
