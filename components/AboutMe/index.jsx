@@ -20,7 +20,7 @@ const AboutMe = () => {
             <section className="w-48 h-48 md:w-72 md:h-72 lg:w-80 lg:h-80 bg-red-400 dark:bg-sky-300 relative rounded-full">
                 <div className="h-44 w-44 md:w-64 md:h-64 lg:w-72 lg:h-72 bg-white rounded-full absolute top-0 right-0">
                     <div className="h-full w-full rounded-full relative">
-                        <Image src={"/images/img-profile.jpg"} className="rounded-full" layout="fill" alt="profile-dzaky" />
+                        <Image src={"/images/img-profile.jpg"} className="rounded-full" layout="fill" alt="Dzaky Badawi | Frontend Engineer" />
                     </div>
                 </div>
             </section>
