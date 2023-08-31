@@ -11,7 +11,7 @@ const Layout = ({ title, children }) => {
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://dbadawi.id" />
             <meta property="og:description" content="Dzaky Badawi" />
-            <meta property="og:image" content="https://www.dbadawi.id/_next/image?url=%2Fimages%2Fimg-profile.jpg&w=1920&q=75" />
+            <meta property="og:image" content="https://www.dbadawi.id/_next/image?url=%2Fimages%2Fimg-profile.png&w=1920&q=75" />
             <meta name="description" content="Hello, I'm Dzaky Badawi" />
             <meta name="keywords" content="dbadawi.id, dzaky ahmad badawi, dzaky, dzaky badawi, dzaky id, dzaky react developer, dzaky, dzaky ahmad badawi web, dzaky badawi web, dbadawi web, dzaky web, web dzaky, nextjs web, dzaky portofolio, dzaky ahmad badawi portofolio" />
             <meta name="robots" content="index, follow" />
