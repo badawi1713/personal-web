@@ -1,5 +1,5 @@
 import React from "react";
-import { IoLogoLinkedin, IoLogoWhatsapp, IoMail } from "react-icons/io5";
+import { IoLogoLinkedin, IoGitBranch, IoMail } from "react-icons/io5";
 
 const Contact = () => {
   return <div className="container px-8">
@@ -14,6 +14,10 @@ const Contact = () => {
         <p>
           dbadawi.dev@gmail.com
         </p>
+      </a>
+      <a rel="noreferrer" target={"_blank"} href="https://github.com/badawi1713" className="flex items-center gap-2 hover:text-red-400 hover:dark:text-sky-400 cursor-pointer">
+        <IoGitBranch />
+        <p>badawi1713</p>
       </a>
     </div>
   </div>
